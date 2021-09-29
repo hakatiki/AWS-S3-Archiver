@@ -1,0 +1,4 @@
+* * * * * cd /Users/takatsbalint/Dokumentumok/Vs_Code/Devops/ && /usr/local/bin/python /Users/takatsbalint/Dokumentumok/Vs_Code/Devops/Solution.py &> /Users/takatsbalint/Dokumentumok/Vs_Code/Devops/crontab.log
+
+
+0 1 * * * cd /Users/takatsbalint/Dokumentumok/Vs_Code/Devops/ && /usr/local/bin/python /Users/takatsbalint/Dokumentumok/Vs_Code/Devops/Solution.py &> /Users/takatsbalint/Dokumentumok/Vs_Code/Devops/crontab.log
