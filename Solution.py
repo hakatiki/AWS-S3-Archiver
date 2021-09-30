@@ -7,14 +7,16 @@ import os
 
 import boto3
 from botocore.exceptions import NoCredentialsError
+import csv
 
+try:
+    file = open('./rootkey.csv')
+    csvreader = csv.reader(file)
 
-
-
-
-ACCESS_KEY = 'AKIAXPW6CYAZPG2YSUBR'
-SECRET_KEY = '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'
-
+    ACCESS_KEY = next(csvreader)[0]
+    SECRET_KEY = next(csvreader)[0] 
+finally:
+    file.close()
 
 def upload_to_aws(local_file, bucket, s3_file):
     s3 = boto3.client('s3', aws_access_key_id=ACCESS_KEY,
