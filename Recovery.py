@@ -62,7 +62,6 @@ def get_dates():
         print('Please enter a start and an end date in the format of YYYY-MM-DD')
         print('Start date:')
         start_date = datetime.strptime(input(), '%Y-%m-%d')
-        #start_date = datetime.strptime('2021-08-20', '%Y-%m-%d')
         print('End date:')
         end_date = datetime.strptime(input(), '%Y-%m-%d')
         if start_date > end_date:
@@ -75,9 +74,6 @@ def get_dates():
         return get_dates()
 
 start_date, end_date = get_dates()
-
-
-
 files = get_aws_files('hakatikibucket','archive/')
 recover = get_file_names(files)
 download_files_aws('hakatikibucket' , recover)
