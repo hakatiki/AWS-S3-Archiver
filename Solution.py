@@ -47,7 +47,7 @@ for i in onlyfiles:
         remove.append(i)
 
 for i in remove:
-    rmpath = mypath+ '/' + i
+    rmpath = mypath + i
     shutil.make_archive( zip_folder + i, 'zip',rmpath )
     uploaded = upload_to_aws(zip_folder + i + '.zip', bucket_name, archive_folder + i + '.zip')
     if (uploaded):
